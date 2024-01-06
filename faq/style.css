@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'work sans';
+    src: url(../Outils/WorkSans/WorkSans-VariableFont_wght.ttf);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'work sans';
+    /*border: 1px solid red*/
+}
+:root {
+    --white:hsl(0, 0%, 100%);
+    --pink: hsl(275, 100%, 97%);
+    --purple: hsl(292, 16%, 49%);
+    --dark_purple: hsl(292, 42%, 14%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-color:var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 40%;
+    background: var(--white);
+    padding: 30px 4%;
+    border-radius: 8%;
+    box-shadow: 0 0 8px hsla(292, 42%, 14%, 0.3);
+}
+.header {
+    display: flex;
+    padding: 0 0 30px 0 ;
+}
+h1 {
+    color: var(--dark_purple);
+    font-size: 40px;
+    margin-left: 20px;
+    align-items: center;
+}
+img {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+img[alt="star"] {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.liner {
+    font-weight: 700;
+    color: var(--dark_purple);
+    padding: 20px 0;
+    line-height: 25px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    cursor: pointer;
+}
+.liner:hover {
+    color: hsl(293, 79%, 48%);
+}
+.reponse {
+    display: none;
+    font-size: 16px;
+    color: #999;
+}
+.reponse:not(last-child) {
+    padding-bottom: 30px;
+}
+
+
+@media screen and (max-width: 430px) {
+    /*body {
+        background-image: url('images/background-pattern-mobile.svg');
+    }*/
+    .container {
+        width: 90%;
+        border-radius: 4%;
+    }
+}

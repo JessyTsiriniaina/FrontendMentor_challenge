@@ -2,6 +2,8 @@ var reponse = document.querySelectorAll('.reponse'),
     question = document.querySelectorAll('.liner'),
     signe = document.querySelectorAll('.signe');
 
+reponse[0].style.display = "block";
+
 for (let index = 0; index < question.length; index++) {
 
     question[index].addEventListener("click", function () {

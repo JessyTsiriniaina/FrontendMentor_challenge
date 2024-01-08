@@ -18,7 +18,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('images/background-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-color:var(--pink);
@@ -28,39 +28,40 @@ body {
 }
 
 .container {
-    width: 40%;
+    width: 600px;
     background: var(--white);
-    padding: 30px 4%;
-    border-radius: 8%;
+    padding: 40px;
+    border-radius: 16px;
     box-shadow: 0 0 8px hsla(292, 42%, 14%, 0.3);
 }
 .header {
     display: flex;
-    padding: 0 0 30px 0 ;
+    padding: 0 0 24px 0 ;
 }
 h1 {
     color: var(--dark_purple);
-    font-size: 40px;
+    font-size: 56px;
     margin-left: 20px;
     align-items: center;
+    font-weight: 700;
 }
 img {
-    width: 25px;
-    height: 25px;
-    align-self: center;
-}
-img[alt="star"] {
     width: 30px;
     height: 30px;
     align-self: center;
 }
+img[alt="star"] {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
 
 .liner {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--dark_purple);
     padding: 20px 0;
     line-height: 25px;
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #eee;
@@ -73,18 +74,31 @@ img[alt="star"] {
     display: none;
     font-size: 16px;
     color: #999;
-}
-.reponse:not(last-child) {
     padding-bottom: 30px;
 }
 
+@media screen and (max-width: 616px) {
 
-@media screen and (max-width: 430px) {
-    /*body {
-        background-image: url('images/background-pattern-mobile.svg');
-    }*/
     .container {
-        width: 90%;
-        border-radius: 4%;
+        width: 327px;
+        border-radius: 8px;
+        padding: 24px;
+    }
+
+    img, img[alt="star"] {
+        width: 24px;
+        height: 24px;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+
+    .liner {
+        font-size: 16px;
+    }
+
+    .reponse {
+        font-size: 14px;
     }
 }
